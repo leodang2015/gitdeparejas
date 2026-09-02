@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor principal de toda la factura */
+.contenedor{
+    max-height: 200px;
+    width: 800px; /* ancho fijo */
+    margin: 40px auto; /* centrado horizontal */
+    display: flex; /* permite dividir en columnas */
+}
+
+/* Parte izquierda (contenido principal) */
+.izquierda-box{
+    width: 65%; /* ocupa el 60% */
+    background: #f5f5f5; /* fondo claro */
+    height:100%;
+}
+
+/* Parte derecha (resumen o totales) */
+.derecha-box{
+    width: 25%; /* ocupa el 40% */
+    background: #2f3e46; /* fondo oscuro */
+    color: white; /* texto blanco */
+    height:100%;
+}
+
+/* Encabezado de la factura */
+.encabezado{
+    background-color: #50634f3a;
+    display: flex;
+    flex-direction: column; /* elementos en columna */
+    justify-content: space-evenly; /* distribución vertical */
+}
+
+/* Título principal */
+.titulo{
+    font-size: 28px;
+}
+
+/* Subtítulo o información secundaria */
+.subtitulo{
+    font-size: 16px;
+    padding: 20px 20px;
+    color: #474747;
+}
+
+/* Sección de datos dividida en dos columnas */
+.mitad{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* espacio entre columnas */
+    height: 177px;
+    margin: 3% 3% 3% 10%;
+}
+
+.parte-final{
+        margin: 3% 3% 3% 10%;
+}
+
+/* Contenedor de la tabla de productos */
+.tabla-productos{
+    height: 205px;
+    padding: 3% 3% 3% 10%;
+    background-color: #50634f3a;
+}
+
+/* Filas de encabezado y productos */
+.header-row, .fila-producto{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Encabezado en negrita */
+.header-row{
+    font-weight: bold;
+}
+
+/* Columnas de la tabla */
+.celda1{ flex: 2; } /* más ancho */
+.celda2, .celda3, .celda4{
+    flex: 1;
+    text-align: right; /* alineado a la derecha */
+}
+
+.tabla-totales{
+    display:flex;
+    flex-direction: column;
+}
+
+/*separador entre tabla y totales*/
+.separador{
+    font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    margin: 0%;
+    justify-content: space-between;
+}
+
+
+.gris{
+    color: #3f4f58;
+    font-weight: bold;
+}
+
+/* Sección intermedia inferior */
+.piemedio{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0% 0% 0% 5%;
+}
+
+.pagos-boton{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+
+
+.boton-pago{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.boton-pago-circular{
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+
+.nombre-card{
+    display:flex;
+    flex-direction: row;
+    flex: 75% 12.5% 12.5%;
+    padding: 0% 0% 5% 0%;
+}
+
+.nombre-card input{
+    width: 25%;
+}
+
+/* Título de la factura (lado derecho) */
+.titulo-factura{
+    display: flex;
+    align-items: center;
+    background-color: #2f3e46;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 169px;
+}
+
+/* Sección de fechas */
+.fechas{
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #3f4f58;
+    align-items: center;
+    text-align: center;
+}
+.resumen-productos{
+    height: 202px;
+    padding: 17% 5% 0% 0%;
+}
+
+
+
+
+/* Contenedor de totales */
+.totales{
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    background-color: #3f4f58;
+    justify-content: space-between;
+    padding: 10% 12% 13% 12%;
+}
+
+.totales-header{
+    color:  #a8c3d1;;
+}
+
+.totales p{
+    padding: 4% 0%;
+}
+/* Total final destacado */
+.total-final{
+    font-weight: bold;
+    background-color: #3f4f58;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 9% 0%;
+}
+
+
+
+
+.firma{
+    background-color: #3f4f58;
+    padding: 80% 0% 10% 0%;
+    text-align: center;
+}
+.firma p{
+    color:white;
+    padding: 0% 0% 4% 0%;
+}
+
+.raya{
+    border-top: 0.5px solid white;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+}
+img{
+    height: 10%;
+    width: 20%;
+}
+
+
+
+@media (max-width: 768px){
+
+    .contenedor{
+        transform: scale(0.6);
+        transform-origin: top left;
+    }
+
+}
+
